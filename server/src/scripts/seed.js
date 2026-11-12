@@ -682,7 +682,11 @@ const sampleDishes = [
 
 async function seedDishes() {
   try {
-    console.log(`Connecting to MongoDB at: ${MONGODB_URI}...`);
+    console.log(
+      MONGODB_URI.startsWith('mongodb+srv')
+        ? 'Connecting to MongoDB Atlas...'
+        : 'Connecting to local MongoDB...'
+    );
     await mongoose.connect(MONGODB_URI);
     console.log('Connected to MongoDB.');
 
