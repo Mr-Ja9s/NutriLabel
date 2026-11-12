@@ -1,0 +1,44 @@
+@import './design-system.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Packaged Food Nutrition Label Rules */
+.label-border-frame {
+  border-width: var(--border-frame);
+  border-color: var(--color-border);
+}
+
+.label-heavy-rule {
+  height: var(--border-heavy-bar);
+  background-color: var(--color-border-heavy);
+}
+
+.label-medium-rule {
+  height: var(--border-medium);
+  background-color: var(--color-border);
+}
+
+.label-hairline {
+  border-top-width: var(--border-hairline);
+  border-color: var(--color-border-subtle);
+}
+
+.label-shadow {
+  box-shadow: var(--shadow-label);
+}

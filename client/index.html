@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutriLabel - Coimbatore Restaurant Nutrition Facts & Calorie Estimator</title>
+    <meta
+      name="description"
+      content="NutriLabel brings honest packaged-food style nutrition facts, calorie ranges, and healthier dish swaps to Coimbatore food delivery orders on Swiggy and Zomato."
+    />
+    <meta name="theme-color" content="#FFD500" />
+    <meta property="og:title" content="NutriLabel - Coimbatore Restaurant Nutrition Facts" />
+    <meta
+      property="og:description"
+      content="Honest nutrition ranges, portion sizing, and healthier dish swaps before ordering."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Noto+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('nutrilabel_theme') || 'system';
+          var isDark = saved === 'night' || (saved === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark', 'theme-night');
+            document.documentElement.classList.remove('theme-day');
+          } else {
+            document.documentElement.classList.remove('dark', 'theme-night');
+            document.documentElement.classList.add('theme-day');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen antialiased selection:bg-brand-yellow selection:text-brand-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
