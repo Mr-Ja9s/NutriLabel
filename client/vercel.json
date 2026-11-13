@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://nutrilabel-server.onrender.com/api/$1"
+      "destination": "https://nutrilabel-api-fxxf.onrender.com/api/$1"
     },
     {
       "source": "/(.*)",
